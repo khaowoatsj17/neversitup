@@ -68,7 +68,7 @@ export default new Vuex.Store({
         return success ? resolve(response) : reject(response)
       })
     },
-    async addToDo ({ commit, getters }, data) {
+    async addToDo ({  getters }, data) {
       const api = {
         method: 'post',
         url: 'https://candidate.neversitup.com/todo/todos/',
@@ -80,7 +80,7 @@ export default new Vuex.Store({
         return success ? resolve(response) : reject(response)
       })
     },
-    async editToDo ({ commit, getters }, data) {
+    async editToDo ({  getters }, data) {
       const api = {
         method: 'put',
         url: 'https://candidate.neversitup.com/todo/todos/' + data._id,
@@ -92,7 +92,7 @@ export default new Vuex.Store({
         return success ? resolve(response) : reject(response)
       })
     },
-    async deleteToDo ({ commit, getters }, id) {
+    async deleteToDo ({  getters }, id) {
       const api = {
         method: 'delete',
         url: 'https://candidate.neversitup.com/todo/todos/' + id,
